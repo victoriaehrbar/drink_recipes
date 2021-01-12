@@ -1,0 +1,2 @@
+class DrinkRecipes::Information
+end
