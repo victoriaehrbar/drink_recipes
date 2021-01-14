@@ -1,7 +1,7 @@
 class DrinkRecipes::CLI
     def start
         puts "Welcome! Please choose a drink."
-        #list choices from API
+        #list choices from API: (Margarita, Blue Margarita, Tommy's Margarita, Whitecap Margarita, Strawberry Margarita, Smashed Watermelon Margarita)
         DrinkRecipes::API.new_drink_from_api
     end
 
