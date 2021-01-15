@@ -7,10 +7,6 @@ class DrinkRecipes::CLI
         DrinkRecipes::API.new_drink_from_api(input)
     end
 
-    def drink_info
-        DrinkRecipes::API.new_drink_from_api 
-    end
-
    
     def exit
         puts "Thank you for using this app!"
