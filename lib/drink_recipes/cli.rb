@@ -1,14 +1,21 @@
 class DrinkRecipes::CLI
     def start
-        puts "Welcome! Please choose a drink."
-        #list choices from API: (Margarita, Blue Margarita, Tommy's Margarita, Whitecap Margarita, Strawberry Margarita, Smashed Watermelon Margarita)
+        puts "Welcome! Please type in a drink."
         input = gets.strip
-        # binding.pry
+        until @input == "exit"
+         # binding.pry
         DrinkRecipes::API.new_drink_from_api(input)
+        end
     end
 
    
-    def exit
+    def end
+        puts "Are you done? Type 'exit' to exit."
+        @input = gets.strip
+    end 
+
+    def bye
         puts "Thank you for using this app!"
     end
+
 end
