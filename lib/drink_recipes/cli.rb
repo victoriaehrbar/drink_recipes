@@ -2,7 +2,7 @@ class DrinkRecipes::CLI
     def start
         puts "Welcome! Please type in a drink."
         input = gets.strip
-        until @input == "exit"
+        while input != "exit"
          # binding.pry
         DrinkRecipes::API.new_drink_from_api(input)
         end
