@@ -10,6 +10,7 @@ class DrinkRecipes::API
             binding.pry
         else 
             puts "No results"
+            start
         end
     end
 
