@@ -5,12 +5,12 @@ class DrinkRecipes::API
         @drinks = JSON.parse(drinks)
         if @drinks["drinks"]
             @drinks["drinks"].each do |drink|
-                DrinkRecipes::Drink.new_drink_from_api(drink)
+                DrinkRecipes::Drink.new_drink(drink)
             end
             binding.pry
         else 
             puts "No results"
-            start
+            DrinkRecipes::CLI.start
         end
     end
 

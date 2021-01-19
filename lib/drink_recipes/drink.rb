@@ -3,7 +3,7 @@ attr_accessor :name, :glass, :ingredients, :measurements, :instructions
 @@all = []
 
 
-def self.new_drink_from_api(drink_hash)
+def self.new_drink(drink_hash)
     drink = self.new
     drink.name = drink_hash.select{|key, value| key.include?("strDrink") && !key.include?("strDrinkThumb") && value}.values
     drink.glass = drink_hash.select{|key, value| key.include?("strGlass") && value}.values
