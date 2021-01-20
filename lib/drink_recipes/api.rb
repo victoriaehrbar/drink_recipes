@@ -7,7 +7,7 @@ class DrinkRecipes::API
             @drinks["drinks"].each do |drink|
                 DrinkRecipes::Drink.new_drink(drink)
             end
-            binding.pry
+            # binding.pry
         else 
             puts "No results"
             DrinkRecipes::CLI.start
