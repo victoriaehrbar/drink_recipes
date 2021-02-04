@@ -14,8 +14,15 @@ class DrinkRecipes::CLI
     end
 
     def self.display_info
-        input = gets.strip
-        DrinkRecipes::API.new_drink_from_api(input)
+        DrinkRecipes::Drink.all.each do |drink| 
+            puts drink.name[0]
+            puts drink.glass[0]
+            puts drink.ingredients
+            puts drink.measurements
+            puts drink.instructions[0]
+        end
+    
+        # binding.pry
     end
    
    def self.goodbye
