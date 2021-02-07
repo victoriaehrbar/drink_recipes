@@ -8,6 +8,7 @@ class DrinkRecipes::CLI
         self.display_info
         puts "Please input another drink or type exit to end.".colorize(:magenta)
         input = gets.strip
+        DrinkRecipes::Drink.clear
         end
         self.goodbye
     end
