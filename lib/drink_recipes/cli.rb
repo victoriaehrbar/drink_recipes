@@ -6,12 +6,13 @@ class DrinkRecipes::CLI
         until input == "exit"
         DrinkRecipes::API.new_drink_from_api(input)
         self.display_info
-        puts "Please input another drink or type exit to end.".colorize(:magenta)
+        puts "Please type in another drink or type exit to end.".colorize(:magenta)
         input = gets.strip
         DrinkRecipes::Drink.clear
         end
         self.goodbye
     end
+
 
     def self.display_info
         DrinkRecipes::Drink.all.each do |drink| 
@@ -29,3 +30,4 @@ class DrinkRecipes::CLI
     puts "Thank you and have a great day!".colorize(:magenta)
    end
 end
+
