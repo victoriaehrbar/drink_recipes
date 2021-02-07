@@ -15,7 +15,7 @@ class DrinkRecipes::CLI
 
     def self.display_info
         DrinkRecipes::Drink.all.each do |drink| 
-            puts drink.name[0]
+            puts drink.name[0].colorize(:blue)
             puts drink.glass[0]
             puts drink.ingredients
             puts drink.measurements
