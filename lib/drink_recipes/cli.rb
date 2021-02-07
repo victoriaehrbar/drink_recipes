@@ -1,12 +1,12 @@
 class DrinkRecipes::CLI
 
     def self.start
-        puts "Welcome! Please type in a drink."
+        puts "Welcome! Please type in a drink.".colorize(:magenta)
         input = gets.strip
         while input != "exit"
         DrinkRecipes::API.new_drink_from_api(input)
         self.display_info
-        puts "Please input another drink or type exit to end."
+        puts "Please input another drink or type exit to end.".colorize(:magenta)
         input = gets.strip
         
         end
@@ -26,6 +26,6 @@ class DrinkRecipes::CLI
     end
    
    def self.goodbye
-    puts "Thank you and have a great day!"
+    puts "Thank you and have a great day!".colorize(:magenta)
    end
 end

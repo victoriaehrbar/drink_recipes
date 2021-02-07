@@ -8,6 +8,7 @@ end
 require 'pry'
 require 'rest-client'
 require 'json'
+require 'colorize'
 
 require_relative "./drink_recipes/version.rb"
 require_relative "./drink_recipes/cli.rb"
