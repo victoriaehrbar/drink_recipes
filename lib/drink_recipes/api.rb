@@ -10,7 +10,6 @@ class DrinkRecipes::API
             # binding.pry
         else 
             puts "No results"
-            DrinkRecipes::CLI.start
         end
     end
 
