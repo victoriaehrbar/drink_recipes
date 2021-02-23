@@ -15,15 +15,16 @@ class DrinkRecipes::CLI
 
 
     def self.display_info
-        DrinkRecipes::Drink.all.each do |drink| 
-            puts drink.name[0].colorize(:blue)
-            puts drink.glass[0]
+        DrinkRecipes::Drink.all.sort_by {|drink| drink.name}.each do |drink| 
+            puts drink.name.colorize(:blue)
+            puts drink.glass
             puts drink.ingredients
             puts drink.measurements
-            puts drink.instructions[0]
+            puts drink.instructions
+        
         end
     
-        # binding.pry
+        
     end
    
    def self.goodbye
