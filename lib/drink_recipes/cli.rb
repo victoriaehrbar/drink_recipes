@@ -15,7 +15,7 @@ class DrinkRecipes::CLI
 
 
     def self.display_info
-        DrinkRecipes::Drink.all.sort_by {|drink| drink.name}.each do |drink| 
+        DrinkRecipes::Drink.all.each do |drink| 
             puts drink.name.colorize(:blue)
             puts drink.glass
             puts drink.ingredients
